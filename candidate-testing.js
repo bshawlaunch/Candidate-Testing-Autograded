@@ -47,22 +47,22 @@ console.log(candidateAnswers)
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-
+ grade = 0;
  for ( let i = 0; i < questions.length; i++){
-  if (candidateAnswers[i] == correctAnswers[i]) {
-    grade = grade + 20
+  if (candidateAnswers[i].toLowerCase() == correctAnswers[i].toLowerCase()) {
+    grade += 20;
   }
   console.log(`You entered ${candidateAnswers[i]}. The correct answer is ${correctAnswers[i]}`)
  }
   console.log(`You scored ${grade} on the quiz.`)
   return grade;
-  
+
 } //
 
 function runProgram() {
   askForName();
   // TODO 1.1c: Greet candidate using their name //
-   console.log(`Hello, ${candidateName}`);
+  console.log(`Hello, ${candidateName}`);
   askQuestion();
   askQuestions();
   gradeQuiz(this.candidateAnswers);
