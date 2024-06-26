@@ -54,8 +54,12 @@ function gradeQuiz(candidateAnswers) {
   }
   console.log(`You entered ${candidateAnswers[i]}. The correct answer is ${correctAnswers[i]}`)
  }
-  console.log(`You scored ${grade} on the quiz.`)
-  return grade;
+  if (grade >= 80) {
+    console.log(`You passed the quiz with a score of ${grade}.`)
+  } else {
+    console.log(`You failed the test with a score of ${grade}.`)
+  }
+    return grade;
 
 } //
 
